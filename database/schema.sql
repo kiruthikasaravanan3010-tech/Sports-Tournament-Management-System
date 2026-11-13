@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS sports_tournament;
+USE sports_tournament;
+CREATE TABLE IF NOT EXISTS departments(dept_id BIGINT PRIMARY KEY AUTO_INCREMENT,dept_name VARCHAR(100) UNIQUE NOT NULL);
+CREATE TABLE IF NOT EXISTS sports(sport_id BIGINT PRIMARY KEY AUTO_INCREMENT,sport_name VARCHAR(100) UNIQUE NOT NULL,min_players INT DEFAULT 1,max_players INT DEFAULT 30);
+CREATE TABLE IF NOT EXISTS teams(team_id BIGINT PRIMARY KEY AUTO_INCREMENT,team_name VARCHAR(120) NOT NULL,department_id BIGINT,sport_id BIGINT NOT NULL,active BOOLEAN DEFAULT TRUE,UNIQUE(team_name,sport_id),FOREIGN KEY(department_id) REFERENCES departments(dept_id),FOREIGN KEY(sport_id) REFERENCES sports(sport_id));
+CREATE TABLE IF NOT EXISTS players(player_id BIGINT PRIMARY KEY AUTO_INCREMENT,player_name VARCHAR(120) NOT NULL,team_id BIGINT NOT NULL,role_name VARCHAR(60),jersey_number INT,participation_count INT DEFAULT 0,FOREIGN KEY(team_id) REFERENCES teams(team_id));
+CREATE TABLE IF NOT EXISTS tournaments(tournament_id BIGINT PRIMARY KEY AUTO_INCREMENT,tournament_name VARCHAR(150) NOT NULL,sport_id BIGINT NOT NULL,start_date DATE,end_date DATE,format_name VARCHAR(30) DEFAULT 'LEAGUE',FOREIGN KEY(sport_id) REFERENCES sports(sport_id));
+CREATE TABLE IF NOT EXISTS venues(venue_id BIGINT PRIMARY KEY AUTO_INCREMENT,venue_name VARCHAR(120) UNIQUE NOT NULL,location_name VARCHAR(150));
+CREATE TABLE IF NOT EXISTS matches(match_id BIGINT PRIMARY KEY AUTO_INCREMENT,tournament_id BIGINT NOT NULL,team1_id BIGINT NOT NULL,team2_id BIGINT NOT NULL,venue_id BIGINT,match_date DATE,match_time TIME,round_name VARCHAR(60),status VARCHAR(30) DEFAULT 'SCHEDULED',CHECK(team1_id<>team2_id),FOREIGN KEY(tournament_id) REFERENCES tournaments(tournament_id),FOREIGN KEY(team1_id) REFERENCES teams(team_id),FOREIGN KEY(team2_id) REFERENCES teams(team_id),FOREIGN KEY(venue_id) REFERENCES venues(venue_id));
+CREATE TABLE IF NOT EXISTS results(result_id BIGINT PRIMARY KEY AUTO_INCREMENT,match_id BIGINT UNIQUE NOT NULL,team1_score INT NOT NULL,team2_score INT NOT NULL,winner_team_id BIGINT,CHECK(team1_score>=0 AND team2_score>=0),FOREIGN KEY(match_id) REFERENCES matches(match_id),FOREIGN KEY(winner_team_id) REFERENCES teams(team_id));
+CREATE TABLE IF NOT EXISTS app_users(user_id BIGINT PRIMARY KEY AUTO_INCREMENT,username VARCHAR(80) UNIQUE NOT NULL,password_hash VARCHAR(100) NOT NULL,role_name VARCHAR(30) NOT NULL);
+INSERT IGNORE INTO departments(dept_id,dept_name) VALUES(1,'IT'),(2,'CSE'),(3,'ECE'),(4,'AIML');
+INSERT IGNORE INTO sports(sport_id,sport_name,min_players,max_players) VALUES(1,'Football',5,20),(2,'Volleyball',6,12),(3,'Basketball',5,15),(4,'Cricket',11,16);
+INSERT IGNORE INTO teams(team_id,team_name,department_id,sport_id) VALUES(1,'IT Warriors',1,1),(2,'CSE Strikers',2,1),(3,'ECE Eagles',3,1);
+INSERT IGNORE INTO tournaments(tournament_id,tournament_name,sport_id,start_date,end_date,format_name) VALUES(1,'Inter Department Football Cup',1,'2026-11-15','2026-11-20','LEAGUE');
+INSERT IGNORE INTO venues(venue_id,venue_name,location_name) VALUES(1,'College Ground','VCET Campus');
