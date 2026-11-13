@@ -1,46 +1,55 @@
-# Sports Tournament Management System (Scenario 20)
+# Sports Tournament Management and Team Performance Analysis System
 
-Local MVP: React + Vite frontend, Java 21 + Spring Boot backend, MySQL database, Python analytics.
+## About the Project
+The Sports Tournament Management System (STMS) is a web-based application developed to manage college sports tournaments and analyze team performance.
 
-## Requirements
-JDK 21, MySQL 8, Node.js 20+, Python 3.11.
+## Technologies Used
+- Frontend: React.js, JavaScript, HTML, CSS, Vite
+- Backend: Java 21, Spring Boot
+- Database: MySQL 8
+- Analytics: Python, Flask, Pandas
+- Data Visualization: Plotly.js
 
-## Step 1 — Database
-Open MySQL Workbench, connect to your local MySQL server, open `database/schema.sql`, and execute it.
-Then edit `java/src/main/resources/application.properties` and replace `CHANGE_ME` with your MySQL password.
+## Main Features
+- Administrator Login and Logout
+- Dashboard
+- Team Management
+- Player Management
+- Tournament Management
+- Match Scheduling
+- Match Result Recording
+- Tournament Standings
+- Match Report Export (CSV)
+- Team Performance Analytics
+- Interactive Pie and Bar Charts
 
-## Step 2 — Backend
-Open VS Code terminal:
-```powershell
-cd "D:\VS code folder\Sports-tournament-Management\java"
-.\mvnw.cmd spring-boot:run
-```
-First run downloads Maven and Java dependencies. Backend: http://localhost:8080/api/health
+## Project Architecture
+- React Frontend
+- Java Spring Boot REST API
+- MySQL Database
+- Python Flask Analytics Service
 
-## Step 3 — Frontend (second terminal)
-```powershell
-cd "D:\VS code folder\Sports-tournament-Management\frontend"
-npm install
-npm run dev
-```
-Open http://localhost:5173
+## Project Documentation
+- Software Requirements Specification (SRS)
+- Use Case Diagram
+- Class Diagram
+- Overall System Architecture
 
-## Demo accounts
-admin/admin123, coordinator/coord123, scorer/scorer123, viewer/viewer123, analyst/analyst123.
+## Project Structure
+- frontend/ – React application
+- java/ – Spring Boot backend
+- python/ – Python analytics service
+- database/ – SQL files
+- docs/ – SRS and diagrams
+- outputs/ – Application screenshots
 
-## Step 4 — Python analytics
-Copy `python/.env.example` to `python/.env`, update DB password, then:
-```powershell
-cd "D:\VS code folder\Sports-tournament-Management\python"
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install -r requirements.txt
-py analyze.py
-```
-Charts and CSV files are written to `outputs/`.
+## How to Run
+1. Start MySQL and configure the database.
+2. Start the Java Spring Boot backend.
+3. Start the Python Flask analytics service.
+4. Start the React frontend using npm run dev.
 
-## Main features
-Team/player management, tournament creation, match scheduling with conflict checks, result entry, automatic standings (win 3, draw 1, loss 0), CSV match report, Python analysis.
-
-## Important project note
-This is a college-project MVP. Demo login is for UI demonstration; API routes are not protected by JWT/role authorization. Do not use real passwords or deploy it for real users without adding production authentication and authorization.
+## Academic Project
+Department of Information Technology  
+Velalar College of Engineering and Technology  
+Academic Year: 2026–2027
