@@ -49,6 +49,23 @@ The Sports Tournament Management System (STMS) is a web-based application develo
 3. Start the Python Flask analytics service.
 4. Start the React frontend using npm run dev.
 
+   
+## Project Code Statistics
+
+| Description | Count |
+|---|---:|
+| Total Source Files | 23 |
+| Total Non-Empty Lines of Code | 2,648 |
+
+### Technologies Used
+- Frontend: React.js, JavaScript, HTML, CSS
+- Backend: Java, Spring Boot
+- Database: MySQL
+- Data Analytics: Python, Flask, Pandas, Plotly
+
+**Note:** LOC count excludes blank lines. Comments may be included.
+
+
 ## Academic Project
 Department of Information Technology  
 Velalar College of Engineering and Technology  
