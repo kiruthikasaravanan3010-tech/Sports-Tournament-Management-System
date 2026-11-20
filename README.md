@@ -52,18 +52,20 @@ The Sports Tournament Management System (STMS) is a web-based application develo
    
 ## Project Code Statistics
 
-| Description | Count |
-|---|---:|
-| Total Source Files | 23 |
-| Total Non-Empty Lines of Code | 2,648 |
+Line of Code. From the repository README: 23 source files, 2,648 non-empty lines (2.648 KLOC); App.jsx ≈ 1,555, ApiController.java ≈ 531, Flask app.py + analyze.py ≈ 547 lines.
+Basic COCOMO (organic mode, a = 2.4, b = 1.05, c = 2.5, d = 0.38). Effort E = 2.4 × (2.648)^1.05 ≈ 6.7 person-months; development time D = 2.5 × (6.7)^0.38 ≈ 5.1 months; average staff = E / D ≈ 1.3 persons. The organic mode fits a small, well-understood application built by a small team.
+Function Point (approximate, average complexity, VAF = 1.0). External inputs 13 × 4 = 52; external outputs 3 × 5 = 15; external inquiries 6 × 4 = 24; internal logical files 9 × 10 = 90; external interface files 0 → UFP ≈ 181 FP. Counts are estimated from the SRS (CRUD operations, standings/CSV/analytics outputs, dashboard and list queries, nine tables).
+4.3 Project schedule
+Task	W1	W2	W3	W4	W5	W6	W7	W8	Output
+Elicitation and SRS	■	■							SRS
+Design (architecture, ER, class)		■	■						Diagrams
+Increment 1 – masters			■	■					Code
+Increment 2 – matches, results				■	■				Code
+Increment 3 – standings, report					■	■			Code
+Increment 4 – analytics						■	■		Charts
+Testing and documentation							■	■	Report
+Earned Value (illustration). If the planned budget at completion is 8 weeks and 6 weeks of work are planned for week 6 with 5 completed, then PV = 6, EV = 5, SPI = EV/PV = 0.83 (behind schedule) – tracked the same way each week.
 
-### Technologies Used
-- Frontend: React.js, JavaScript, HTML, CSS
-- Backend: Java, Spring Boot
-- Database: MySQL
-- Data Analytics: Python, Flask, Pandas, Plotly
-
-**Note:** LOC count excludes blank lines. Comments may be included.
 
 
 ## Academic Project
