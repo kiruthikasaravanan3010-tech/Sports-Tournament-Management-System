@@ -52,9 +52,9 @@ The Sports Tournament Management System (STMS) is a web-based application develo
    
 ## Project Code Statistics
 
-## 4. Software Project Estimation and Metrics
+##  Software Project Estimation and Metrics
 
-### 4.1 Lines of Code (LOC)
+###  Lines of Code (LOC)
 
 The size of the Sports Tournament Management and Team Performance Analysis System (STMS) is estimated using the Lines of Code (LOC) metric.
 
@@ -72,9 +72,8 @@ The size of the Sports Tournament Management and Team Performance Analysis Syste
 | ApiController.java | 531 |
 | app.py + analyze.py | 547 |
 
-*Note: LOC values are approximate and should be verified using the same counting method across all source files.*
 
-### 4.2 Basic COCOMO Estimation
+### Basic COCOMO Estimation
 
 The Basic COCOMO model is used to estimate the development effort and time required for the project.
 
@@ -124,7 +123,7 @@ Average Staff = Effort / Development Time
 
 *Note: These are theoretical estimates based on the Basic COCOMO model, not actual recorded project effort or duration.*
 
-### 4.3 Function Point Analysis
+###  Function Point Analysis
 
 Function Point Analysis (FPA) is used to estimate the functional size of the software based on its features.
 
@@ -149,9 +148,7 @@ FP = 181 × 1.0
 
 **Estimated Function Points = 181 FP**
 
-*Note: Function point counts are approximate estimates based on the SRS and assumed average complexity. A formal FPA review may produce different values.*
-
-### 4.4 Project Schedule
+### Project Schedule
 
 The following table represents an illustrative eight-week development schedule for STMS.
 
@@ -174,8 +171,6 @@ The following table represents an illustrative eight-week development schedule f
 - Standings and CSV Report
 - Analytics Charts
 - Testing and Project Documentation
-
-*Note: This is an illustrative project schedule. Update the weeks based on the actual development timeline if necessary.*
 
 ### 4.5 Earned Value Analysis (EVA)
 
