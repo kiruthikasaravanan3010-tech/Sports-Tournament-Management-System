@@ -52,21 +52,157 @@ The Sports Tournament Management System (STMS) is a web-based application develo
    
 ## Project Code Statistics
 
-Line of Code. From the repository README: 23 source files, 2,648 non-empty lines (2.648 KLOC); App.jsx ≈ 1,555, ApiController.java ≈ 531, Flask app.py + analyze.py ≈ 547 lines.
-Basic COCOMO (organic mode, a = 2.4, b = 1.05, c = 2.5, d = 0.38). Effort E = 2.4 × (2.648)^1.05 ≈ 6.7 person-months; development time D = 2.5 × (6.7)^0.38 ≈ 5.1 months; average staff = E / D ≈ 1.3 persons. The organic mode fits a small, well-understood application built by a small team.
-Function Point (approximate, average complexity, VAF = 1.0). External inputs 13 × 4 = 52; external outputs 3 × 5 = 15; external inquiries 6 × 4 = 24; internal logical files 9 × 10 = 90; external interface files 0 → UFP ≈ 181 FP. Counts are estimated from the SRS (CRUD operations, standings/CSV/analytics outputs, dashboard and list queries, nine tables).
-4.3 Project schedule
-Task	W1	W2	W3	W4	W5	W6	W7	W8	Output
-Elicitation and SRS	■	■							SRS
-Design (architecture, ER, class)		■	■						Diagrams
-Increment 1 – masters			■	■					Code
-Increment 2 – matches, results				■	■				Code
-Increment 3 – standings, report					■	■			Code
-Increment 4 – analytics						■	■		Charts
-Testing and documentation							■	■	Report
-Earned Value (illustration). If the planned budget at completion is 8 weeks and 6 weeks of work are planned for week 6 with 5 completed, then PV = 6, EV = 5, SPI = EV/PV = 0.83 (behind schedule) – tracked the same way each week.
+## 4. Software Project Estimation and Metrics
 
+### 4.1 Lines of Code (LOC)
 
+The size of the Sports Tournament Management and Team Performance Analysis System (STMS) is estimated using the Lines of Code (LOC) metric.
+
+| Metric | Value |
+|---|---:|
+| Total Source Files | 23 |
+| Total Non-Empty Lines of Code | 2,648 |
+| Project Size | 2.648 KLOC |
+
+**Major Source Files:**
+
+| File | Approximate Lines |
+|---|---:|
+| App.jsx | 1,555 |
+| ApiController.java | 531 |
+| app.py + analyze.py | 547 |
+
+*Note: LOC values are approximate and should be verified using the same counting method across all source files.*
+
+### 4.2 Basic COCOMO Estimation
+
+The Basic COCOMO model is used to estimate the development effort and time required for the project.
+
+**Selected Mode:** Organic Mode
+
+The Organic Mode is suitable for small software projects developed by a small team with familiar technologies and requirements.
+
+**COCOMO Parameters:**
+
+| Parameter | Value |
+|---|---:|
+| a | 2.4 |
+| b | 1.05 |
+| c | 2.5 |
+| d | 0.38 |
+| Project Size | 2.648 KLOC |
+
+**Effort Estimation:**
+
+Formula:
+
+E = a × (KLOC)^b
+
+E = 2.4 × (2.648)^1.05
+
+**Estimated Effort = 6.7 Person-Months**
+
+**Development Time:**
+
+Formula:
+
+D = c × (E)^d
+
+D = 2.5 × (6.7)^0.38
+
+**Estimated Development Time ≈ 5.1 Months**
+
+**Average Team Size:**
+
+Formula:
+
+Average Staff = Effort / Development Time
+
+= 6.7 / 5.1
+
+**Average Staff ≈ 1.3 Persons**
+
+*Note: These are theoretical estimates based on the Basic COCOMO model, not actual recorded project effort or duration.*
+
+### 4.3 Function Point Analysis
+
+Function Point Analysis (FPA) is used to estimate the functional size of the software based on its features.
+
+The following values are estimated from the STMS requirements using average complexity weights.
+
+| Function Type | Count | Average Weight | Total |
+|---|---:|---:|---:|
+| External Inputs (EI) | 13 | 4 | 52 |
+| External Outputs (EO) | 3 | 5 | 15 |
+| External Inquiries (EQ) | 6 | 4 | 24 |
+| Internal Logical Files (ILF) | 9 | 10 | 90 |
+| External Interface Files (EIF) | 0 | 7 | 0 |
+| **Total UFP** | | | **181** |
+
+Value Adjustment Factor (VAF) = 1.0
+
+Adjusted Function Points:
+
+FP = UFP × VAF
+
+FP = 181 × 1.0
+
+**Estimated Function Points = 181 FP**
+
+*Note: Function point counts are approximate estimates based on the SRS and assumed average complexity. A formal FPA review may produce different values.*
+
+### 4.4 Project Schedule
+
+The following table represents an illustrative eight-week development schedule for STMS.
+
+| Activities | W1 | W2 | W3 | W4 | W5 | W6 | W7 | W8 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Requirement Elicitation and SRS | ■ | ■ | | | | | | |
+| System Design and Diagrams | | ■ | ■ | | | | | |
+| Increment 1 – Master Modules | | | ■ | ■ | | | | |
+| Increment 2 – Matches and Results | | | | ■ | ■ | | | |
+| Increment 3 – Standings and Reports | | | | | ■ | ■ | | |
+| Increment 4 – Analytics | | | | | | ■ | ■ | |
+| Testing and Documentation | | | | | | | ■ | ■ |
+
+**Expected Deliverables:**
+
+- SRS Document
+- System Architecture, ER and Class Diagrams
+- Team, Player and Tournament Modules
+- Match Scheduling and Result Management
+- Standings and CSV Report
+- Analytics Charts
+- Testing and Project Documentation
+
+*Note: This is an illustrative project schedule. Update the weeks based on the actual development timeline if necessary.*
+
+### 4.5 Earned Value Analysis (EVA)
+
+Earned Value Analysis is a project management technique used to compare planned work with completed work.
+
+**Illustrative Example:**
+
+Assume the planned project duration is 8 weeks. At the end of Week 6:
+
+- Planned Value (PV) = 6 units
+- Earned Value (EV) = 5 units
+
+**Schedule Performance Index (SPI):**
+
+SPI = EV / PV
+
+SPI = 5 / 6
+
+**SPI = 0.83**
+
+**Interpretation:**
+
+- SPI = 1: Project is on schedule.
+- SPI > 1: Project is ahead of schedule.
+- SPI < 1: Project is behind schedule.
+
+Since the SPI is 0.83, the illustrative project progress is behind the planned schedule.
 
 ## Academic Project
 Department of Information Technology  
